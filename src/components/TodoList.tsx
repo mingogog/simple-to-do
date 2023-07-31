@@ -1,7 +1,9 @@
 import { useState } from "react";
 
-const TodoList = () => {
-    const todos = ["Buy groceries", "Clean the house", "Walk the dog"];
+interface TodoListProps{
+    todos: string[];
+}
+const TodoList: React.FC<TodoListProps> = ({todos}: TodoListProps) => {
     const [currentItem, setCurrentItem] = useState(0);
     return (
         <div>
